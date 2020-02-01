@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>README</title>
+    <style type="text/css">
+        body {
+            font-size: 1.1em;
+            line-height: 1.5em;
+            max-width: 45em;
+            margin: auto;
+            padding: 0 2%;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+            margin: .75em auto;
+        }
+    </style>
+</head>
+<body>
+<h1>
+<a id="user-content-render_github_markdown" class="anchor" href="#render_github_markdown" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>render_github_markdown</h1>
+<p>tool for rendering markdown as html for hosting as a webpage or printing to pdf</p>
+<p>utilizes the <a href="https://developer.github.com/v3/markdown/">github markdown API</a> for markdown to html conversion</p>
+<h3>
+<a id="user-content-usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>usage</h3>
+<pre><code>  -format-for string
+        will the rendered markdown be used for web or pdf? (default "web")
+  -in string
+        path to an input markdown file (default "REQUIRED")
+  -out string
+        path to an output html file (default is the name of the source file with the extension .html)
+  -title string
+        title for the generated html doc (default is the name of "in" without the extension)
+</code></pre>
+<h3>
+<a id="user-content-examples" class="anchor" href="#examples" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>examples</h3>
+<pre><code>$ ./render_github_markdown --in README.md
+</code></pre>
+<p>outputs <code>README.html</code> like <a href="https://garrettsparks.github.io/README" rel="nofollow">this</a></p>
+<pre><code>$ ./render_github_markdown --in README.md --out PDF_README.html --title "PDF ReadMe" --format-for pdf
+</code></pre>
+<p>outputs <code>PDF_README.html</code> like <a href="https://garrettsparks.github.io/PDF_README" rel="nofollow">this</a> which is slightly better formatted for converting to PDF</p>
+
+</body>
